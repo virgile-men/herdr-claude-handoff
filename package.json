@@ -10,5 +10,15 @@
     "node": ">=20"
   },
   "author": "Virgile Mendes",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virgile-men/herdr-claude-handoff.git"
+  },
+  "keywords": [
+    "herdr",
+    "herdr-plugin",
+    "claude-code",
+    "remote-control"
+  ]
 }

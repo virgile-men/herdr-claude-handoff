@@ -20,9 +20,9 @@ phone / claude.ai ──► claude rc ──(adopt, once: new claude.ai URL)─�
 ## Install
 
 ```sh
-herdr plugin link /path/to/herdr-claude-handoff          # local checkout
-# or, once published with the `herdr-plugin` topic:
-herdr plugin install <owner>/herdr-claude-handoff
+herdr plugin install virgile-men/herdr-claude-handoff
+# or, from a local checkout:
+herdr plugin link /path/to/herdr-claude-handoff
 ```
 
 Requires Node.js ≥ 20 and Claude Code ≥ 2.1.296 on `PATH` (no npm dependencies).
