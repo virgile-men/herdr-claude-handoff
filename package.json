@@ -1,0 +1,14 @@
+{
+  "name": "herdr-claude-handoff",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Move Claude Code sessions between herdr panes, background sessions and claude rc",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Virgile Mendes",
+  "license": "MIT"
+}

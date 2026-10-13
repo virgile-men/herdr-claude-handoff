@@ -1,0 +1,41 @@
+id = "claude-handoff"
+name = "Claude handoff"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Move Claude Code sessions between herdr panes, background sessions and claude rc (Remote Control)"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "background"
+title = "Claude: send this pane's session to the background"
+description = "Runs /bg in the focused Claude pane; the session keeps running and stays reachable on claude.ai"
+contexts = ["pane"]
+command = ["node", "src/actions/background.js"]
+
+[[actions]]
+id = "sessions"
+title = "Claude: sessions (attach / adopt from claude rc)"
+description = "Pick a background or claude rc session and open it in a new tab"
+contexts = ["global", "workspace", "pane"]
+command = ["node", "src/actions/sessions.js"]
+
+[[actions]]
+id = "open-url"
+title = "Claude: open a claude.ai session link here"
+description = "Adopt or attach the session behind a claude.ai/code/session_… link"
+contexts = ["global"]
+command = ["node", "src/actions/open-url.js"]
+
+[[panes]]
+id = "picker"
+title = "Claude sessions"
+placement = "popup"
+width = "85%"
+height = "70%"
+command = ["node", "src/popup/picker.js"]
+
+[[link_handlers]]
+id = "claude-session-link"
+title = "Open Claude session in herdr"
+pattern = "^https://claude\\.ai/code/session_[A-Za-z0-9]+"
+action = "open-url"
